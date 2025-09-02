@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@import "./theme.css";
+@import "./utilities.css";
+@import "./custom.css" layer(utilities);
+
+@source '../../vendor/tailpress/framework/**/*.php';
+@source '../../vendor/tailpress/framework/**/**/*.php';
+
+@font-face {
+  font-family: "Spline Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("~fonts/SplineSans-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Spline Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("~fonts/SplineSans-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Spline Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("~fonts/SplineSans-Bold.woff2") format("woff2");
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+
+  @media (max-width: 600px) {
+    padding-inline: 1rem;
+  }
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-zinc-200, currentColor);
+  }
+}
