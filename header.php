@@ -30,7 +30,7 @@
         <div class="md:flex md:justify-between md:items-center border-b border-black py-6 absolute top-0 left-0 right-0 mx-4 sm:mx-8 z-50">
             <div class="flex justify-between items-center relative z-50">
                 <div id="logo">
-                    <a href="<?php echo esc_url(home_url('/')); ?>" class="!no-underline">
+                    <a href="<?php echo esc_url(home_url('/')); ?>" class="!no-underline" aria-label="Go back to homepage">
                         <svg width="160" height="50" viewBox="0 0 742 212" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M76 24V36C76 49.25 86.75 60 100 60H212V36H100V24H212V0H100C86.75 0 76 10.75 76 24Z" fill="black"/>
                             <path d="M112 76H100C86.75 76 76 86.75 76 100V212H100V136H112V212H136V100C136 86.75 125.25 76 112 76ZM100 124V100H112V124H100Z" fill="black"/>
@@ -104,9 +104,6 @@
     </header>
 
     <div id="content" class="site-content grow overflow-hidden">
-        <?php if (is_front_page()): ?>
-            
-        <?php endif; ?>
 
         <?php do_action('tailpress_content_start'); ?>
         <main>

@@ -63,7 +63,7 @@ $gif_url      = get_template_directory_uri() . '/assets/images/' . $cfg['gif'];
         <div class="grid grid-cols-2 lg:grid-cols-3 lg:items-start">
             <div class="flex flex-row col-span-2 lg:col-span-1 lg:flex-col gap-6 pb-8 sm:pb-12 lg:pb-0 pr-0 lg:pr-12">
                 <div class="overflow-hidden">
-                    <a href="<?= esc_url( home_url() ); ?>">
+                    <a href="<?= esc_url( home_url() ); ?>" aria-label="Go back to homepage">
                         <div id="footer-lottie-container" class="w-full h-full aspect-square animateOnView">
                             <!-- Lottie animation will be loaded here -->
                         </div>
